@@ -23,10 +23,16 @@ function button_connection() {
 	if (verif_email == true &&
 		verif_password1 == true) {
 		all_verif = true;
- 
+
+		var ok = new Information("class/php/connexion.php"); // création de la classe 
+		ok.add("login", "root"); // ajout de l'information pour lenvoi 
+		ok.add("password", "root"); // ajout d'une deuxieme information denvoi  
+		console.log(ok.info()); // demande l'information dans le tableau
+		ok.push(); // envoie l'information au code pkp 
+
 	} else {
 		all_verif = false;
- 
+
 	}
 }
 
@@ -126,6 +132,12 @@ function button_incription() {
 		document.getElementById("submit_button").className = "spinner-border text-primary";
 		document.getElementById("submit_button").innerHTML = "";
 
+
+		var ok = new Information("class/php/inscription.php"); // création de la classe 
+		ok.add("login", "root"); // ajout de l'information pour lenvoi 
+		ok.add("password", "root"); // ajout d'une deuxieme information denvoi  
+		console.log(ok.info()); // demande l'information dans le tableau
+		ok.push(); // envoie l'information au code pkp 
 		setTimeout(function () {
 			document.getElementById("submit_button").className = "btn btn-primary";
 			document.getElementById("submit_button").innerHTML = "Submit";
