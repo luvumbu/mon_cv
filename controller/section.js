@@ -1,5 +1,33 @@
 function button_connection() {
+	let email = document.getElementById("email").value;
+	let password1 = document.getElementById("password1").value;
+
+	let verif_email = false;
+	let verif_password1 = false;
+	let all_verif = false;
+	if (email == "") {
+		document.getElementById("error_mail_c").className = "";
+		verif_email = false;
+	} else {
+		document.getElementById("error_mail_c").className = "display_none";
+		verif_email = true;
+	}
+	if (password1 == "") {
+		document.getElementById("error_password_c").className = "";
+		verif_password1 = false;
+	} else {
+		document.getElementById("error_password_c").className = "display_none";
+		verif_password1 = true;
+	}
+
+	if (verif_email == true &&
+		verif_password1 == true) {
+		all_verif = true;
  
+	} else {
+		all_verif = false;
+ 
+	}
 }
 
 function button_incription() {
@@ -89,18 +117,18 @@ function button_incription() {
 
 		all_verif = true;
 	} else {
- 
+
 		all_verif = false;
 	}
 
 
-	if(all_verif==true){
-		document.getElementById("submit_button").className="spinner-border text-primary";
-		document.getElementById("submit_button").innerHTML="";
-	 
-		setTimeout(function(){ 
-			document.getElementById("submit_button").className="btn btn-primary";
-			document.getElementById("submit_button").innerHTML="Submit";
+	if (all_verif == true) {
+		document.getElementById("submit_button").className = "spinner-border text-primary";
+		document.getElementById("submit_button").innerHTML = "";
+
+		setTimeout(function () {
+			document.getElementById("submit_button").className = "btn btn-primary";
+			document.getElementById("submit_button").innerHTML = "Submit";
 		}, 3000);
 	}
 	// if(email_verif==true &&  nom_verif == true && prenom_verif == true && adresse_physique_verif==true  ){
