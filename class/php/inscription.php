@@ -7,7 +7,6 @@ if($REMOTE_ADDR=="::1"){
   $username = "root";
   $password = $username;
   $dbname = "all_ffa";
-
 }
 else {
   $servername = "localhost";
