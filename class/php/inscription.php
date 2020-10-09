@@ -14,12 +14,6 @@ else {
   $password ="v3p9r3e@59A";
   $dbname = $username;
 }
-
-
-
-
-
-
 $email = $_POST["email"] ; 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
