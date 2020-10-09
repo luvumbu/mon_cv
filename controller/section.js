@@ -1,0 +1,114 @@
+function button_connection() {
+ 
+}
+
+function button_incription() {
+
+	let email = document.getElementById("email").value;
+	let nom = document.getElementById("nom").value;
+	let prenom = document.getElementById("prenom").value;
+	let adresse_physique = document.getElementById("adresse_physique").value;
+	let naissance = document.getElementById("naissance").value;
+	let password1 = document.getElementById("Password1").value;
+	let password2 = document.getElementById("Password2").value;
+
+	let email_verif = false;
+	let nom_verif = false;
+	let prenom_verif = false;
+	let adresse_physique_verif = false;
+	let naissance_verif = false;
+	let password1_verif = document.getElementById("Password1").value;
+	let password2_verif = false;
+	let all_verif = false;
+
+
+	if (email == "") {
+		document.getElementById("error_mail").className = "";
+		email_verif = false;
+
+	} else {
+		document.getElementById("error_mail").className = "display_none";
+		email_verif = true;
+	}
+
+	if (nom == "") {
+		document.getElementById("error_nom").className = "";
+		nom_verif = false;
+	} else {
+		document.getElementById("error_nom").className = "display_none";
+		nom_verif = true;
+	}
+
+	if (prenom == "") {
+		document.getElementById("error_prenom").className = "";
+		prenom_verif = false;
+	} else {
+		document.getElementById("error_prenom").className = "display_none";
+		prenom_verif = true;
+	}
+	if (adresse_physique == "") {
+		document.getElementById("error_adresse_physique").className = "";
+		adresse_physique_verif = false;
+	} else {
+		document.getElementById("error_adresse_physique").className = "display_none";
+		adresse_physique_verif = true;
+
+	}
+	if (naissance == "") {
+		document.getElementById("error_naissance").className = "";
+		naissance_verif = false;
+
+	} else {
+		document.getElementById("error_naissance").className = "display_none";
+		naissance_verif = true;
+
+	}
+	if (password1 == "") {
+		document.getElementById("error_password1").className = "";
+		password1_verif = false;
+	} else {
+		document.getElementById("error_password1").className = "display_none";
+		password1_verif = true;
+
+	}
+	if (password2 == "") {
+		document.getElementById("error_password2").className = "";
+		password2_verif = false;
+	} else {
+		document.getElementById("error_password2").className = "display_none";
+		password2_verif = true;
+	}
+
+	if (email_verif == true &&
+		nom_verif == true &&
+		prenom_verif == true &&
+		adresse_physique_verif == true &&
+		naissance_verif == true &&
+		password1_verif == true &&
+		password2_verif == true) {
+
+		all_verif = true;
+	} else {
+ 
+		all_verif = false;
+	}
+
+
+	if(all_verif==true){
+		document.getElementById("submit_button").className="spinner-border text-primary";
+		document.getElementById("submit_button").innerHTML="";
+	 
+		setTimeout(function(){ 
+			document.getElementById("submit_button").className="btn btn-primary";
+			document.getElementById("submit_button").innerHTML="Submit";
+		}, 3000);
+	}
+	// if(email_verif==true &&  nom_verif == true && prenom_verif == true && adresse_physique_verif==true  ){
+	// 		alert("Tout est ok")
+	// 	}
+	// 	else {
+	// 		alert("pas ok "); 
+	// 	}
+
+
+}
