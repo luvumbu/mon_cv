@@ -4,7 +4,7 @@ include("class/php/ip.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-
+<link rel="stylesheet" href="class/css/style.css">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,38 +45,6 @@ include("class/php/ip.php");
 
 		?>
 	</div>
-	<style>
-		.w-100pc {
-			display: flex;
-			justify-content: space-around;
-			background-color: #80bdff;
-		}
-
-		.w-100pc div {
-			padding: 15px;
-			color: white;
-
-		}
-
-		.w-100pc div:hover {
-			cursor: pointer;
-		}
-
-		#section_info {
-			width: 60%;
-			margin: auto;
-			margin-top: 5%;
-		}
-
-		.fa-remove {
-			padding: 15px;
-			color: #ff8083;
-		}
-
-		.display_none {
-			display: none;
-		}
-	</style>
 </body>
 
 </html>
