@@ -22,19 +22,23 @@ session_start() ;
   </div>
   <div type="submit" id="submit_button" class="btn btn-primary" onclick="button_connection()">Submit</div>
 </form>
-<div class="alert alert-success">
-  <strong>Success!</strong> Connexion reussi
-</div>
-<div class="alert alert-danger">
-  <strong>Danger!</strong> Erreur mot de passe ou adresse mail
-</div>
+ 
 
-<?php 
+<?php
+if (isset($_SESSION["information"])) {
 
-if(isset($_SESSION["newsession"])){
-  echo $_SESSION["newsession"] ;
+  if ($_SESSION["information"] == "Succes") {
+
+    echo '<div class="alert alert-success">
+    <strong>Success!</strong> Connexion reussi
+  </div>';   
+ echo ' <meta http-equiv="refresh" content="3; URL=login/index.php" />';
+
+  } else {
+    echo '<div class="alert alert-danger">
+<strong>Erreur</strong> Erreur Mot de passe ou adresse mail  <strong><a href="http:google.com" style="color:red">Mot de passe oublié </strong>
+</div>';
+  }
 }
-else {
-  echo "NON" ; 
-}
+
 ?>

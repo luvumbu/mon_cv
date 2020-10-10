@@ -26,8 +26,8 @@ function button_connection() {
 		all_verif = true;
 
 		var ok = new Information("class/php/connexion.php"); // création de la classe 
-		ok.add("login", "root"); // ajout de l'information pour lenvoi 
-		ok.add("password", "root"); // ajout d'une deuxieme information denvoi  
+		ok.add("email", email); // ajout de l'information pour lenvoi 
+		ok.add("password1", password1); // ajout d'une deuxieme information denvoi  
 		console.log(ok.info()); // demande l'information dans le tableau
 		ok.push(); // envoie l'information au code pkp 
 

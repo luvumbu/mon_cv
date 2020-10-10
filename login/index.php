@@ -22,8 +22,7 @@ include("class/php/ip.php");
 			<?php
 			if (isset($_SESSION["information"])) {
 
-				if ($_SESSION["information"] == "Succes") {
-				echo "oui" ; 
+				if ($_SESSION["information"] == "Succes") { 
 				
 				}
 				else {
@@ -34,8 +33,6 @@ include("class/php/ip.php");
 				echo ' <meta http-equiv="refresh" content="0; URL=../index.php" />';
 			}
 
-			?>
-			<?php
 			include("model/header.php");
 			?>
 		</header>

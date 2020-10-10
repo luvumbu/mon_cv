@@ -25,9 +25,7 @@ include("class/php/ip.php");
 				if ($_SESSION["information"] == "Succes") {
 					header('Location: login/index.php');
 					exit();
-				} else {
-					echo "Echec de la connexion";
-				}
+				} 
 			}
 			include("model/header.php");
 			?>
@@ -67,7 +65,7 @@ include("class/php/ip.php");
 		#section_info {
 			width: 60%;
 			margin: auto;
-			margin-top: 15%;
+			margin-top: 5%;
 		}
 
 		.fa-remove {
