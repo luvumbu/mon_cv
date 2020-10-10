@@ -1,4 +1,5 @@
 function button_connection() {
+
 	let email = document.getElementById("email").value;
 	let password1 = document.getElementById("password1").value;
 
@@ -34,10 +35,24 @@ function button_connection() {
 		all_verif = false;
 
 	}
+
+
+
+	document.getElementById("submit_button").className = "spinner-border text-primary";
+	document.getElementById("submit_button").innerHTML = "";
+
+	setTimeout(function () {
+		document.getElementById("submit_button").className = "btn btn-primary";
+		document.getElementById("submit_button").innerHTML = "Submit";
+
+ 
+			Ajax("section_info","pages/connexion.php") ; 
+	}, 3000);
+
 }
 
 function button_incription() {
-
+ 
 	let email = document.getElementById("email").value;
 	let nom = document.getElementById("nom").value;
 	let prenom = document.getElementById("prenom").value;
@@ -138,9 +153,13 @@ function button_incription() {
  
 		console.log(ok.info()); // demande l'information dans le tableau
 		ok.push(); // envoie l'information au code pkp 
+		
 		setTimeout(function () {
 			document.getElementById("submit_button").className = "btn btn-primary";
 			document.getElementById("submit_button").innerHTML = "Submit";
+      
+
+			Ajax("section_info","pages/inscription.php") ; 
 		}, 3000);
 	}
 	// if(email_verif==true &&  nom_verif == true && prenom_verif == true && adresse_physique_verif==true  ){

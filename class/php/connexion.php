@@ -15,3 +15,6 @@ else {
   $password ="v3p9r3e@59A";
   $dbname = $username;
 }
+
+
+$_SESSION["information"] = "Succes";
