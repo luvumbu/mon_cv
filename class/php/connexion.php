@@ -13,9 +13,6 @@ if ($REMOTE_ADDR == "::1") {
   $password = "v3p9r3e@59A";
   $dbname = $username;
 }
-
-
-
 $email = $_POST["email"];
 $password1 = sha1( $_POST["password1"]);
 echo "?";
