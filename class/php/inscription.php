@@ -56,6 +56,7 @@ if ($result->num_rows > 0) {
 
   if ($conn2->query($sql2) === TRUE) {
     echo "New record created successfully";
+    $_SESSION["Connexion"] = "ON" ; 
   } else {
     echo "Error: " . $sql2 . "<br>" . $conn2->error;
   }

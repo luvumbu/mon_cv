@@ -35,6 +35,10 @@ include("class/php/ip.php");
 		</footer>
 		<?php
 		include("vue.html");
+
+		if(isset($_SESSION["LOG"])){
+			echo "Connexion reussi redirection";
+		}
 		?>
 	</div>
 	<style>

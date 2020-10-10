@@ -126,6 +126,20 @@ function button_incription() {
 	} else {
 		document.getElementById("error_password2").className = "display_none";
 		password2_verif = true;
+	} 
+
+
+	if(password1_verif==true && password2_verif==true){
+		if(password1==password2){
+			password1_verif=true;
+			password2_verif=true;
+		}
+		else {
+			password1_verif=false;
+			password2_verif=false;
+			alert("Les mot de passe ne sont pas identiques");
+
+		}
 	}
 
 	if (email_verif == true &&
