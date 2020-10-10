@@ -71,17 +71,8 @@ if (isset($_SESSION["information"])) {
 
     echo '<div class="alert alert-success">
     <strong>Success!</strong> Inscription reussi
-  </div>';
-
-
- 
-
- 
-   
+  </div>';   
  echo ' <meta http-equiv="refresh" content="3; URL=login/index.php" />';
-
- 
-
 
   } else {
     echo '<div class="alert alert-danger">
