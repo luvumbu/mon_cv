@@ -78,7 +78,7 @@ if (isset($_SESSION["information"])) {
 
  
    
- echo ' <meta http-equiv="refresh" content="3; URL=http://www.example.com/" />';
+ echo ' <meta http-equiv="refresh" content="3; URL=login/index.php" />';
 
  
 

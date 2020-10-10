@@ -40,10 +40,6 @@ if ($result->num_rows > 0) {
   }
 } else {
   $_SESSION["information"] = "Succes";
-
-
-
-
   // Insertion 
   $conn2 = new mysqli($servername, $username, $password, $dbname);
   // Check connection
@@ -62,8 +58,6 @@ if ($result->num_rows > 0) {
   }
   
   $conn2->close();
-
   // Fin insertion 
-
 }
 $conn->close();

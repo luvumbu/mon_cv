@@ -20,6 +20,15 @@ include("class/php/ip.php");
 	<div id="body">
 		<header>
 			<?php
+			if (isset($_SESSION["information"])) {
+
+				if ($_SESSION["information"] == "Succes") {
+					header('Location: login/index.php');
+					exit();
+				} else {
+					echo "Echec de la connexion";
+				}
+			}
 			include("model/header.php");
 			?>
 		</header>
@@ -36,9 +45,6 @@ include("class/php/ip.php");
 		<?php
 		include("vue.html");
 
-		if(isset($_SESSION["LOG"])){
-			echo "Connexion reussi redirection";
-		}
 		?>
 	</div>
 	<style>
@@ -51,22 +57,25 @@ include("class/php/ip.php");
 		.w-100pc div {
 			padding: 15px;
 			color: white;
-	 
+
 		}
 
 		.w-100pc div:hover {
 			cursor: pointer;
 		}
-		#section_info{
+
+		#section_info {
 			width: 60%;
 			margin: auto;
 			margin-top: 15%;
 		}
-		.fa-remove{
+
+		.fa-remove {
 			padding: 15px;
 			color: #ff8083;
 		}
-		.display_none{
+
+		.display_none {
 			display: none;
 		}
 	</style>
