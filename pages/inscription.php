@@ -1,5 +1,6 @@
 <?php 
 session_start(); 
+header("Access-Control-Allow-Origin: *");
 ?>
 <h1>
   Inscription
@@ -71,9 +72,20 @@ if (isset($_SESSION["information"])) {
     echo '<div class="alert alert-success">
     <strong>Success!</strong> Inscription reussi
   </div>';
+
+
+ 
+
+ 
+   
+ echo ' <meta http-equiv="refresh" content="3; URL=http://www.example.com/" />';
+
+ 
+
+
   } else {
     echo '<div class="alert alert-danger">
-<strong>Erreur</strong> Utilisateur déjà enregistre  <strong><a href="http://google.com" style="color:red">Mot de passe oublié </strong>
+<strong>Erreur</strong> Utilisateur déjà enregistre  <strong><a href="http:google.com" style="color:red">Mot de passe oublié </strong>
 </div>';
   }
 }
