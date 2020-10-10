@@ -149,11 +149,27 @@ function button_incription() {
 
 
 		var ok = new Information("class/php/inscription.php"); // création de la classe 
-		ok.add("email", document.getElementById("email").value); // ajout de l'information pour lenvoi 
+ // ajout dest information envoie php 
+
+ let email = document.getElementById("email").value;
+
+
+ ok.add("email", email); // ajout de l'information pour lenvoi 
+ ok.add("nom", nom); // ajout de l'information pour lenvoi 
+ ok.add("prenom", prenom); // ajout de l'information pour lenvoi 
+ ok.add("adresse_physique", adresse_physique); // ajout de l'information pour lenvoi 
+ ok.add("naissance", naissance); // ajout de l'information pour lenvoi 
+ ok.add("password1", password1); // ajout de l'information pour lenvoi 
  
+//  
+//  
+//  
+//  
+//  
+ // fin de lajout 
 		console.log(ok.info()); // demande l'information dans le tableau
 		ok.push(); // envoie l'information au code pkp 
-		
+
 		setTimeout(function () {
 			document.getElementById("submit_button").className = "btn btn-primary";
 			document.getElementById("submit_button").innerHTML = "Submit";

@@ -15,6 +15,13 @@ else {
   $dbname = $username;
 }
 $email = $_POST["email"] ; 
+
+ 
+$nom = $_POST["nom"];
+$prenom = $_POST["prenom"];
+$adresse_physique = $_POST["adresse_physique"];
+$naissance = $_POST["naissance"];
+$password1 =  sha1( $_POST["password1"]);
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -33,9 +40,29 @@ if ($result->num_rows > 0) {
   }
 } else {
   $_SESSION["information"] = "Succes";
+
+
+
+
+  // Insertion 
+  $conn2 = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn2->connect_error) {
+    die("Connection failed: " . $conn2->connect_error);
+  }
+  
+  $sql2 = "INSERT INTO user (mail_user, nom_user, prenom_user,adresse_physique_user,naissance_user,password_user)
+  VALUES ('$email','$nom','  $prenom','  $adresse_physique','  $naissance','  $password1')";
+
+  if ($conn2->query($sql2) === TRUE) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql2 . "<br>" . $conn2->error;
+  }
+  
+  $conn2->close();
+
+  // Fin insertion 
+
 }
 $conn->close();
-
-
-
-

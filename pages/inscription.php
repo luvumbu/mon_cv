@@ -73,7 +73,7 @@ if (isset($_SESSION["information"])) {
   </div>';
   } else {
     echo '<div class="alert alert-danger">
-<strong>Erreur</strong> Utilisateur déjà enregistre  <strong><a href="http:google.com" style="color:red">Mot de passe oublié </strong>
+<strong>Erreur</strong> Utilisateur déjà enregistre  <strong><a href="http://google.com" style="color:red">Mot de passe oublié </strong>
 </div>';
   }
 }
