@@ -10,7 +10,7 @@ if($REMOTE_ADDR=="::1"){
 }
 else {
   $servername = "localhost";
-  $username = "u481158665_all_ffa3";
+  $username = "u947959947_mon_cv_activit";
   $password ="v3p9r3e@59A";
   $dbname = $username;
 }
@@ -21,7 +21,7 @@ $nom = $_POST["nom"];
 $prenom = $_POST["prenom"];
 $adresse_physique = $_POST["adresse_physique"];
 $naissance = $_POST["naissance"];
-$password1 = sha1( $_POST["password1"]);
+$password1 = sha1($_POST["password1"]);
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection

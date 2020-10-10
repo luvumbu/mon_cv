@@ -9,7 +9,7 @@ if ($REMOTE_ADDR == "::1") {
   $dbname = "mon_cv_activite";
 } else {
   $servername = "localhost";
-  $username = "u481158665_all_ffa3";
+  $username = "u947959947_mon_cv_activit";
   $password = "v3p9r3e@59A";
   $dbname = $username;
 }
@@ -26,6 +26,11 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+//$email = "luvumbu.n@gmail.com"; 
+ 
+
+
+echo $password1;
 $sql ='SELECT * FROM `user` WHERE `mail_user`="'.$email.'" AND `password_user` ="'.$password1.'"';
 $result = $conn->query($sql);
 
@@ -40,6 +45,7 @@ if ($result->num_rows > 0) {
 
   }
 } else {
+echo "NUL";
 
 	$_SESSION["information"] = "Danger";
 }
