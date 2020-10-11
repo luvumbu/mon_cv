@@ -22,11 +22,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
 //$email = "luvumbu.n@gmail.com"; 
- 
-
-
 echo $password1;
 $sql ='SELECT * FROM `user` WHERE `mail_user`="'.$email.'" AND `password_user` ="'.$password1.'"';
 $result = $conn->query($sql);

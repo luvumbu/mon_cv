@@ -50,6 +50,19 @@ include("class/php/ip.php");
 		include("vue.html");
 		?>
 	</div>
+
+	<style>
+		.nav-link:hover{
+			cursor: pointer;
+		}
+		.block{
+			display:block;
+			text-align:center;
+
+
+			
+		}
+	</style>
 </body>
 
 </html>
