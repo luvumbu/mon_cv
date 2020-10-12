@@ -3,15 +3,15 @@
 </div>-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" v-on:click="navbarNavAltMarkup">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse clock" id="navbarNavAltMarkup">
+  <div class="collapse navbar-collapse clock" id="navbarNavAltMarkup" >
     <div class="navbar-nav" >
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link">Ajouter informations</a>
-      <a class="nav-item nav-link">Model de CV</a>
-      <a class="nav-item nav-link">Parametrage</a>
+      <a class="nav-item nav-link active" href="#" v-on:click="home" id="home" >Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link"  v-on:click="add_information" id="add_information">Ajouter informations</a>
+      <a class="nav-item nav-link"  v-on:click="my_model" id="my_model">Model de CV</a>
+      <a class="nav-item nav-link"  v-on:click="my_conf" id="my_conf">Parametrage</a>
       <a class="nav-item nav-link" v-on:click="destroy" style="color:red">Déconnexion</a>
     </div>
   </div>

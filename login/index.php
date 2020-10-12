@@ -57,11 +57,13 @@ include("class/php/ip.php");
 		}
 		.block{
 			display:block;
-			text-align:center;
+			text-align:center;			
+		} 
+	 .ok{
+		 text-align: center;
+		 display: block;
 
-
-			
-		}
+	 }
 	</style>
 </body>
 
