@@ -18,21 +18,25 @@ var body = new Vue({
       this.all_header();
       this.toggle_menu();
       document.getElementById("home").className = "nav-item nav-link active";
+      Ajax("info_plus", "view/pages/home.php");
     },
     add_information: function () {
       this.all_header();
       this.toggle_menu();
       document.getElementById("add_information").className = "nav-item nav-link active";
+      Ajax("info_plus", "view/pages/add_information.php");
     },
     my_model: function () {
       this.all_header();
       this.toggle_menu();
       document.getElementById("my_model").className = "nav-item nav-link active";
+      Ajax("info_plus", "view/pages/my_model.php");
     },
     my_conf: function () {
       this.all_header();
       this.toggle_menu();
       document.getElementById("my_conf").className = "nav-item nav-link active";
+      Ajax("info_plus", "view/pages/my_conf.php");
     },
     navbarNavAltMarkup: function () {
       this.toggle_menu(); 
@@ -51,6 +55,6 @@ var body = new Vue({
         document.getElementById("navbarNavAltMarkup").style = "display:none;";
         this.statue_menu = false;
       }
-    }
+    } 
   }
 })
